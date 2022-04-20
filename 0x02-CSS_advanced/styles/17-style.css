@@ -284,11 +284,11 @@ a:active {
 }
 
 .section-body {
-  padding: var(--section-header-padding);
+  padding: var(--section-body-padding);
 }
 
 .section-footer {
-  padding: var(--section-header-padding);
+  padding: var(--section-footer-padding);
 }
 
 .section-title {
@@ -313,5 +313,5 @@ a:active {
 }
 
 .footer {
-  padding: var(--section-header-padding);
+  padding: var(--footer-padding);
 }

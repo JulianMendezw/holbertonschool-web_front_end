@@ -442,7 +442,7 @@ ul.row {
 
 .card-services a {
   display: block;
-  padding: 2rem;
+  padding-top: 2rem;
   background-color: var(--color-light-grey);
 }
 
@@ -467,4 +467,3 @@ ul.row {
   padding-top: 1rem;
   color: var(--color-primary);
 }
-

@@ -7,13 +7,10 @@ $default-sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !defaul
 /// @param {List} $order - default sort order
 
 @function str-compare($string-a, $string-b, $order: $default-sort-order) {
-	// Cast values strings to lowercase to normalize data
 	$string-a: to-lower-case($string-a); //=> astring
 	$string-b: to-lower-case($string-b); //=> bstring
 
 	@for $i from 1 through min(str-length($string-a), str-length($string-b)) {
-		//= @for $i from 1 through 7
-
 		$char-a: str-slice($string-a, $i, $i); //=> str-slice(astring, 1, 1) => a
 		$char-b: str-slice($string-b, $i, $i); //=> str-slice(bstring, 1, 1) => b
 
@@ -44,7 +41,6 @@ $default-sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !defaul
 	@for $i from 1 through length($list) {
 		@for $j from $i through 1 {
 			@if $j > 1 and str-compare(nth($list, $j), nth($list, $j - 1), $order) {
-				// If the item should go before
 				$list: swap($list, $j, $j - 1);
 			}
 		}
